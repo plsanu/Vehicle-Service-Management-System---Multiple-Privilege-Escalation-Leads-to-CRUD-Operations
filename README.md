@@ -12,7 +12,7 @@ Vehicle Service Management System - 'Multiple' Privilege Escalation Leads to CRU
 ### CVE : 
 ### Google Dork: N/A
 ### Reference: 
-- https://www.plsanu.com/vehicle-service-management-system-multiple-privilege-escalation-leads-to-crud-operations/
+- https://www.plsanu.com/vehicle-service-management-system-multiple-privilege-escalation-leads-to-crud-operations
 - https://github.com/plsanu/Vehicle-Service-Management-System-Multiple-Privilege-Escalation-Leads-to-CRUD-Operations
 
 ### 1. Vehicle Service Management System - 'User List' (/admin/?page=user/list) (/admin/?page=user/manage_user)
