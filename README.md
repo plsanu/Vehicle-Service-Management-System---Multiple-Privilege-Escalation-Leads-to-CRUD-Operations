@@ -1,23 +1,20 @@
-# Vehicle Service Management System - 'Multiple' Privilege Escalation Leads to CRUD Operations
-Vehicle Service Management System - 'Multiple' Privilege Escalation Leads to CRUD Operations
+# CVE-2021-46075
 
 ### Exploit Title: Vehicle Service Management System - 'Multiple' Privilege Escalation Leads to CRUD Operations
-### Date: 29/12/2021
-### Exploit Author: P.L.Sanu
-### Exploit Author Website: https://www.plsanu.com
-### Vendor Homepage: https://www.sourcecodester.com
-### Software Link: https://www.sourcecodester.com/php/14972/vehicle-service-management-system-php-free-source-code.html
-### Version: <= 1.0
-### Tested on: Windows 10
-### CVE : 
-### Google Dork: N/A
-### Reference: 
+### Exploit Author: <a href="https://www.plsanu.com">P.L.Sanu</a>
+### CVE: CVE-2021-46075
+### CVSS: 7.2 HIGH
+### References: 
 - https://www.plsanu.com/vehicle-service-management-system-multiple-privilege-escalation-leads-to-crud-operations
-- https://github.com/plsanu/Vehicle-Service-Management-System-Multiple-Privilege-Escalation-Leads-to-CRUD-Operations
+- https://nvd.nist.gov/vuln/detail/CVE-2021-46075
+- https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-46075
+
+### Description:
+A Privilege Escalation vulnerability exists in Sourcecodester Vehicle Service Management System 1.0. Staff account users can access the admin resources and perform CRUD Operations.
 
 ### 1. Vehicle Service Management System - 'User List' (/admin/?page=user/list) (/admin/?page=user/manage_user)
 
-### Steps to Reproduce:
+### Exploit:
 1. Visit the admin panel http://localhost/vehicle_service/admin
 2. Login the Admin account in Browser A (Chrome)
 3. Login the Staff account in Browser B (Firefox)
@@ -34,7 +31,7 @@ Vehicle Service Management System - 'Multiple' Privilege Escalation Leads to CRU
 
 ### 2. Vehicle Service Management System - 'Category List' (/admin/?page=maintenance/category) (/admin/?page=maintenance/manage_category)
 
-### Steps to Reproduce:
+### Exploit:
 1. Visit the admin panel http://localhost/vehicle_service/admin
 2. Login the Admin account in Browser A (Chrome)
 3. Login the Staff account in Browser B (Firefox)
@@ -51,7 +48,7 @@ Vehicle Service Management System - 'Multiple' Privilege Escalation Leads to CRU
 
 ### 3. Vehicle Service Management System - 'Service List' (/admin/?page=maintenance/services) (/admin/?page=maintenance/manage_service)
 
-### Steps to Reproduce:
+### Exploit:
 1. Visit the admin panel http://localhost/vehicle_service/admin
 2. Login the Admin account in Browser A (Chrome)
 3. Login the Staff account in Browser B (Firefox)
@@ -68,7 +65,7 @@ Vehicle Service Management System - 'Multiple' Privilege Escalation Leads to CRU
 
 ### 4. Vehicle Service Management System - 'Settings' (/admin/?page=system_info)
 
-### Steps to Reproduce:
+### Exploit:
 1. Visit the admin panel http://localhost/vehicle_service/admin
 2. Login the Admin account in Browser A (Chrome)
 3. Login the Staff account in Browser B (Firefox)
@@ -82,3 +79,13 @@ Vehicle Service Management System - 'Multiple' Privilege Escalation Leads to CRU
 11. The details have been updated successfully.
 12. Staff account can able to access the Settings page.
 13. Staff account can able to Update the Settings.
+
+### Impact:
+An remote attacker gain elevated access to resources that should normally be unavailable. In staff account users can able to access the admin resources and perform CRUD Operations.
+
+### Mitigation:
+It is recommended to implement the following:
+- Proper privilege account management
+- Monitor and manage all privileged sessions
+- Strong password policies and enforcement
+- Sanitize user inputs and secure the databases
